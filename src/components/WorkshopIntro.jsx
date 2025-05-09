@@ -1,12 +1,9 @@
-import React from 'react';
-
-const WorkshopIntro = ({ title, description }) => {
-  return (
-    <div className="workshop-intro">
+const WorkshopIntro = ({ title, description, intro }) => (
+    <section className="intro">
       <h1>{title}</h1>
       <p>{description}</p>
-    </div>
+      <p>{intro}</p>
+    </section>
   );
-};
-
-export default WorkshopIntro;
+  
+  export default WorkshopIntro;

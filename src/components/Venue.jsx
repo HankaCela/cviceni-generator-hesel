@@ -1,13 +1,11 @@
-import React from 'react';
-
-const Venue = ({ location, address }) => {
-  return (
-    <div className="venue">
-      <h2>Venue</h2>
-      <p><strong>Location:</strong> {location}</p>
-      <p><strong>Address:</strong> {address}</p>
-    </div>
+const Venue = ({ name, street, city, photo, instructions }) => (
+    <section className="venue">
+      <h2>Místo konání</h2>
+      <h3>{name}</h3>
+      <p>{street}, {city}</p>
+      <p>{instructions}</p>
+      <img src={photo} alt={name} width="300" />
+    </section>
   );
-};
-
-export default Venue;
+  
+  export default Venue;

@@ -1,13 +1,12 @@
-import React from 'react';
-
-const Instructor = ({ name, bio }) => {
-  return (
-    <div className="instructor">
-      <h2>Instructor</h2>
-      <p><strong>Name:</strong> {name}</p>
-      <p><strong>Bio:</strong> {bio}</p>
-    </div>
+const Instructor = ({ name, email, profession, bio, avatar }) => (
+    <section className="instructor">
+      <h2>Instruktor</h2>
+      {avatar && <img src={avatar} alt={name} width="150" />}
+      <h3>{name}</h3>
+      <p><strong>{profession}</strong></p>
+      <p>{bio}</p>
+      <p>Kontakt: <a href={`mailto:${email}`}>{email}</a></p>
+    </section>
   );
-};
-
-export default Instructor;
+  
+  export default Instructor;
